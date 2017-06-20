@@ -1,6 +1,7 @@
 package KP.FengShui;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JButton;
 import java.awt.Font;
 import java.awt.Color;
@@ -23,8 +24,14 @@ public class Kuhna extends JFrame {
 		JButton b_Menu = new JButton("Меню");
 		b_Menu.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new Menu("ФенШуй");
-				setVisible(false);
+				Object[] options = { "Перейти до меню", "Продовжити опитування"};
+				int i_menu = JOptionPane.showOptionDialog(null, "Якщо Ви перейдете в меню, то введені дані знищаться.",
+						"Попередження", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, options,
+						null);
+				if (i_menu == 0) {
+					new Menu("ФенШуй");
+					setVisible(false);
+				}				
 			}
 		});
 		b_Menu.setForeground(new Color(0, 128, 0));

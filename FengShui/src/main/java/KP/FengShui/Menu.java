@@ -25,17 +25,17 @@ public class Menu extends JFrame {
 		setLocationRelativeTo(null);
 		getContentPane().setLayout(null);
 
-		JButton b_Peredpokoi = new JButton("Передпокої");
-		b_Peredpokoi.addActionListener(new ActionListener() {
+		JButton b_Korudor = new JButton("Коридор");
+		b_Korudor.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new Peredpokoi("ФенШуй");
+				new Korudor("ФенШуй");
 				setVisible(false);
 			}
 		});
-		b_Peredpokoi.setForeground(new Color(0, 128, 0));
-		b_Peredpokoi.setFont(new Font("Sitka Text", Font.ITALIC, 24));
-		b_Peredpokoi.setBounds(0, 525, 166, 40);
-		getContentPane().add(b_Peredpokoi);
+		b_Korudor.setForeground(new Color(0, 128, 0));
+		b_Korudor.setFont(new Font("Sitka Text", Font.ITALIC, 25));
+		b_Korudor.setBounds(0, 525, 166, 40);
+		getContentPane().add(b_Korudor);
 
 		JButton b_Kuhna = new JButton("Кухня");
 		b_Kuhna.addActionListener(new ActionListener() {
@@ -45,13 +45,13 @@ public class Menu extends JFrame {
 			}
 		});
 		b_Kuhna.setForeground(new Color(0, 128, 0));
-		b_Kuhna.setFont(new Font("Sitka Text", Font.ITALIC, 24));
+		b_Kuhna.setFont(new Font("Sitka Text", Font.ITALIC, 25));
 		b_Kuhna.setBounds(166, 525, 166, 40);
 		getContentPane().add(b_Kuhna);
 
 		JButton b_Vitalna = new JButton("Вітальня");
 		b_Vitalna.setForeground(new Color(0, 128, 0));
-		b_Vitalna.setFont(new Font("Sitka Text", Font.ITALIC, 24));
+		b_Vitalna.setFont(new Font("Sitka Text", Font.ITALIC, 25));
 		b_Vitalna.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				new Vitalna("ФенШуй");
@@ -69,7 +69,7 @@ public class Menu extends JFrame {
 			}
 		});
 		b_Dutaca.setForeground(new Color(0, 128, 0));
-		b_Dutaca.setFont(new Font("Sitka Text", Font.ITALIC, 24));
+		b_Dutaca.setFont(new Font("Sitka Text", Font.ITALIC, 25));
 		b_Dutaca.setBounds(499, 525, 166, 40);
 		getContentPane().add(b_Dutaca);
 
@@ -81,7 +81,7 @@ public class Menu extends JFrame {
 			}
 		});
 		b_Vanna.setForeground(new Color(0, 128, 0));
-		b_Vanna.setFont(new Font("Sitka Text", Font.ITALIC, 24));
+		b_Vanna.setFont(new Font("Sitka Text", Font.ITALIC, 25));
 		b_Vanna.setBounds(665, 525, 166, 40);
 		getContentPane().add(b_Vanna);
 
@@ -93,7 +93,7 @@ public class Menu extends JFrame {
 			}
 		});
 		b_Spalna.setForeground(new Color(0, 128, 0));
-		b_Spalna.setFont(new Font("Sitka Text", Font.ITALIC, 24));
+		b_Spalna.setFont(new Font("Sitka Text", Font.ITALIC, 25));
 		b_Spalna.setBounds(831, 525, 167, 40);
 		getContentPane().add(b_Spalna);
 
