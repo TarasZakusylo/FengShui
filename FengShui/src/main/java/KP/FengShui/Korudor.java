@@ -27,7 +27,8 @@ public class Korudor extends JFrame {
 	private Choice choice6;
 	private Choice choice7;
 
-	public Korudor(String s) {
+	public Korudor(String s, final String s_Bagua, final int i_Gua1, final int i_Gua2, final int i_Gua3, final int i_Gua4, final int i_Gua5,
+			final int i_Gua6) {
 		super(s);
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -64,8 +65,12 @@ public class Korudor extends JFrame {
 				String s_choice5 = choice5.getSelectedItem();
 				String s_choice6 = choice6.getSelectedItem();
 				String s_choice7 = choice7.getSelectedItem();
-		
-				new Korudor1(s_choice1, s_choice2, s_choice3, s_choice4, s_choice5, s_choice6, s_choice7);
+
+				System.out.println(i_Gua1+" "+i_Gua2+" "+i_Gua3+" "+i_Gua4+" "+i_Gua5+" "+i_Gua6+" "+
+				s_choice1+" "+s_choice2+" "+s_choice3+" "+s_choice4+" "+s_choice5+" "+s_choice6+" "+s_choice7);
+				
+				new Korudor1(s_Bagua ,i_Gua1, i_Gua2, i_Gua3, i_Gua4, i_Gua5, i_Gua6, s_choice1, s_choice2, s_choice3, s_choice4,
+						s_choice5, s_choice6, s_choice7);
 				setVisible(false);
 
 			}
@@ -187,11 +192,10 @@ public class Korudor extends JFrame {
 		choice7.add("Я атеїст");
 		choice7.add("інші релігії");
 
-		 l_logo = new JLabel("");
-		 l_logo.setBounds(0, 0, 994, 565);
-		 l_logo.setIcon(new
-		 ImageIcon("res/Oputyvanna.jpg"));
-		 getContentPane().add(l_logo);
+		l_logo = new JLabel("");
+		l_logo.setBounds(0, 0, 994, 565);
+		l_logo.setIcon(new ImageIcon("res/Oputyvanna.jpg"));
+		getContentPane().add(l_logo);
 
 		setVisible(true);
 	}

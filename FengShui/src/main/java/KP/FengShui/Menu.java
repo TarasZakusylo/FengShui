@@ -16,6 +16,8 @@ public class Menu extends JFrame {
 
 	private JLabel l_logo;
 
+	int i_kimnata = 0 ;
+	
 	public Menu(String s) {
 		super(s);
 
@@ -28,7 +30,8 @@ public class Menu extends JFrame {
 		JButton b_Korudor = new JButton("Коридор");
 		b_Korudor.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new Korudor("ФенШуй");
+				i_kimnata = 1 ;
+				new Gua ("ФенШуй", i_kimnata) ;
 				setVisible(false);
 			}
 		});
