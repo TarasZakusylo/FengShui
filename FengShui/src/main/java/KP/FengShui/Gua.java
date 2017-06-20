@@ -463,7 +463,7 @@ public class Gua extends JFrame {
 			}
 		});
 		l_logo.setBounds(0, 0, 994, 565);
-		l_logo.setIcon(new ImageIcon("C:\\Users\\Zakkk\\Desktop\\Oputyvanna.jpg"));
+		l_logo.setIcon(new ImageIcon("res/Oputyvanna.jpg"));
 		getContentPane().add(l_logo);
 
 		setVisible(true);
