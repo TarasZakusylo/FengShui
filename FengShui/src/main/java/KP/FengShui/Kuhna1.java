@@ -33,11 +33,11 @@ public class Kuhna1 extends JFrame {
 	private int i_putanna3 = 0;
 	private int i_putanna4 = 0;
 	private int i_putanna5 = 0;
-	private int i_putanna6 = 0; 
-	private int i_putanna7 = 0; 
+	private int i_putanna6 = 0;
+	private int i_putanna7 = 0;
 
-	public Kuhna1(  final String s_choice1, final String s_choice2, final String s_choice3,
-			final String s_choice4, final String s_choice5, final String s_choice6, final String s_choice7) {
+	public Kuhna1(final String s_choice1, final String s_choice2, final String s_choice3, final String s_choice4,
+			final String s_choice5, final String s_choice6, final String s_choice7) {
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(1000, 600);
@@ -70,10 +70,9 @@ public class Kuhna1 extends JFrame {
 						|| i_putanna6 == 0 || i_putanna7 == 0) {
 					JOptionPane.showMessageDialog(null, "Помилка введення !");
 				} else {
-					
-					new KuhnaRezultaty( s_choice1, s_choice2,
-							s_choice3, s_choice4, s_choice5, s_choice6, s_choice7, i_putanna1, i_putanna2, i_putanna3,
-							i_putanna4, i_putanna5, i_putanna6 , i_putanna7 );
+
+					new KuhnaRezultaty(s_choice1, s_choice2, s_choice3, s_choice4, s_choice5, s_choice6, s_choice7,
+							i_putanna1, i_putanna2, i_putanna3, i_putanna4, i_putanna5, i_putanna6, i_putanna7);
 					setVisible(false);
 				}
 			}
