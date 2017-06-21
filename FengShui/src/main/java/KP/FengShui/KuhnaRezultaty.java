@@ -14,20 +14,18 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextPane;
 import javax.swing.SwingConstants;
 
-public class KorudorRezultaty extends JFrame {
+public class KuhnaRezultaty extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 
 	String s_Rezult = "";
 
-	String s_BaguaResult = "";
-	private String s_GuaNapram1 = "";
 
 	private JLabel l_logo;
 
 	private JLabel lblNewLabel;
 
-	public KorudorRezultaty(String s_Bagua, int i_Gua1, int i_Gua2, int i_Gua3, int i_Gua4, int i_Gua5, int i_Gua6,
+	public KuhnaRezultaty(
 			String s_choice1, String s_choice2, String s_choice3, String s_choice4, String s_choice5, String s_choice6,
 			String s_choice7, int i_putanna1, int i_putanna2, int i_putanna3, int i_putanna4, int i_putanna5,
 			int i_putanna6, int i_putanna7) {
@@ -183,75 +181,7 @@ public class KorudorRezultaty extends JFrame {
 		 * 
 		 */
 
-		switch (s_Bagua) {
-		case "Схід": {
-			s_BaguaResult = "Дерево";
-		}
-			break;
-		case "Південний схід": {
-			s_BaguaResult = "Дерево";
-		}
-			break;
-		case "Підень": {
-			s_BaguaResult = "Вогонь";
-		}
-			break;
-		case "Південний захід": {
-			s_BaguaResult = "Земля";
-		}
-			break;
-		case "Захід": {
-			s_BaguaResult = "Метал";
-		}
-			break;
-		case "Північний захід": {
-			s_BaguaResult = "Метал";
-		}
-			break;
-		case "Північ": {
-			s_BaguaResult = "Вода";
-		}
-			break;
-		case "Північний схід": {
-			s_BaguaResult = "Земля";
-		}
-			break;
-		}
-
-		switch (i_Gua1) {
-		case 1: {
-			s_GuaNapram1 = "Вода";
-		}
-			break;
-		case 2: {
-			s_GuaNapram1 = "Земля";
-		}
-			break;
-		case 3: {
-			s_GuaNapram1 = "Дерево";
-		}
-			break;
-		case 4: {
-			s_GuaNapram1 = "Дерево";
-		}
-			break;
-		case 6: {
-			s_GuaNapram1 = "Метал";
-		}
-			break;
-		case 7: {
-			s_GuaNapram1 = "Метал";
-		}
-			break;
-		case 8: {
-			s_GuaNapram1 = "Земля";
-		}
-			break;
-		case 9: {
-			s_GuaNapram1 = "Вогонь";
-		}
-			break;
-		}
+		
 
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(500, 82, 482, 330);
@@ -262,20 +192,6 @@ public class KorudorRezultaty extends JFrame {
 		textPane.setForeground(new Color(186, 85, 211));
 		textPane.setFont(new Font("Trebuchet MS", Font.PLAIN, 20));
 		textPane.setText(s_Rezult);
-
-		JLabel label = new JLabel("Ваша стихія - " + s_GuaNapram1);
-		label.setHorizontalAlignment(SwingConstants.CENTER);
-		label.setForeground(new Color(0, 255, 255));
-		label.setFont(new Font("Trebuchet MS", Font.PLAIN, 25));
-		label.setBounds(446, 443, 482, 30);
-		getContentPane().add(label);
-
-		JLabel label_1 = new JLabel("Стихія Вашого коридору - " + s_BaguaResult);
-		label_1.setHorizontalAlignment(SwingConstants.CENTER);
-		label_1.setForeground(new Color(0, 255, 255));
-		label_1.setFont(new Font("Trebuchet MS", Font.PLAIN, 25));
-		label_1.setBounds(456, 474, 482, 30);
-		getContentPane().add(label_1);
 
 		JLabel label_2 = new JLabel("Коридор");
 		label_2.setHorizontalAlignment(SwingConstants.CENTER);
