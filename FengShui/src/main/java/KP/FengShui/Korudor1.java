@@ -72,9 +72,6 @@ public class Korudor1 extends JFrame {
 					JOptionPane.showMessageDialog(null, "Помилка введення !");
 				} else {
 					
-					System.out.println(i_putanna1+" "+ i_putanna2+" "+i_putanna3+" "+
-							i_putanna4+" "+i_putanna5+" "+i_putanna6+" "+ i_putanna7 );
-					
 					new KorudorRezultaty(s_Bagua, i_Gua1, i_Gua2, i_Gua3, i_Gua4, i_Gua5, i_Gua6, s_choice1, s_choice2,
 							s_choice3, s_choice4, s_choice5, s_choice6, s_choice7, i_putanna1, i_putanna2, i_putanna3,
 							i_putanna4, i_putanna5, i_putanna6 , i_putanna7 );

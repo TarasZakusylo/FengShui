@@ -98,7 +98,7 @@ public class Gua extends JFrame {
 					String s_Bagua = choice1.getSelectedItem();
 					String s_choice2 = choice2.getSelectedItem();
 
-					if (b_simja == true) {
+//					if (b_simja == true) {
 						switch (s_choice2) {
 						case "1": {
 							String s_choice3 = choice3.getSelectedItem();
@@ -245,7 +245,7 @@ public class Gua extends JFrame {
 						}
 							break;
 						}
-					}
+//					}
 
 					new Korudor("ФенШуй", s_Bagua, i_Gua1, i_Gua2, i_Gua3, i_Gua4, i_Gua5, i_Gua6);
 					setVisible(false);
