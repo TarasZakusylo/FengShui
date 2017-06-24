@@ -1,9 +1,11 @@
 package KP.FengShui;
 
 import java.awt.Color;
+import java.awt.Desktop;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.URI;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -20,15 +22,13 @@ public class KuhnaRezultaty extends JFrame {
 
 	String s_Rezult = "";
 
-
 	private JLabel l_logo;
 
-	private JLabel lblNewLabel;
+	Desktop desktop = Desktop.getDesktop();
 
-	public KuhnaRezultaty(
-			String s_choice1, String s_choice2, String s_choice3, String s_choice4, String s_choice5, String s_choice6,
-			String s_choice7, int i_putanna1, int i_putanna2, int i_putanna3, int i_putanna4, int i_putanna5,
-			int i_putanna6, int i_putanna7) {
+	public KuhnaRezultaty(String s_choice1, String s_choice2, String s_choice3, String s_choice4, String s_choice5,
+			String s_choice6, String s_choice7, int i_putanna1, int i_putanna2, int i_putanna3, int i_putanna4,
+			int i_putanna5, int i_putanna6, int i_putanna7) {
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(1000, 600);
@@ -54,137 +54,104 @@ public class KuhnaRezultaty extends JFrame {
 		b_Menu.setFont(new Font("Sitka Text", Font.ITALIC, 24));
 		getContentPane().add(b_Menu);
 
-		if (s_choice1.equals("Темний, тьмяний") || s_choice1.equals("Маю сумніви")) {
-			s_Rezult = s_Rezult + "Створіть хороше освітлення у Вашому коридорі.\n\n";
-		}
-		if (s_choice2.equals("Так, тісненько у мене")) {
-			s_Rezult = s_Rezult + "Не ставте біля входу багато меблів, віддайте перевагу шафам з дверцятами,"
-					+ " що закриваються. Обмежтесь 1-2 шафами.\n\n";
-		}
-		if (s_choice3.equals("Все взуття поряд із дверима (\"під рукою\")")
-				|| s_choice3.equals("Більшість взуття поряд із дверима")) {
-			s_Rezult = s_Rezult + "Взуття, що мало використовується сховайте у шафу."
-					+ " Звільніть прохід. Тоді енергія буде легше проникати у будинок.\n\n";
-		}
-		if (s_choice4.equals("Все одноманітне (однотонне)")) {
-			s_Rezult = s_Rezult + "Простір можна акцентувати яскравими елементами червоного і жовтого кольору,"
-					+ " так як ці кольори притягують ци. Наприклад, поставити червоний пуф, або дзеркало в жовтій оправі.\n\n";
-		}
-		if (s_choice5.equals("Залізні") || s_choice5.equals("Пластикові") || s_choice5.equals("Скляні")) {
-			s_Rezult = s_Rezult + "Двері повинні містити дерево. "
-					+ "Наприклад, зробіть якісь декоративні дерев'яні вставочки.\n\n";
-		}
-		if (s_choice6.equals("Мені це не цікаво") || s_choice6.equals("Не скриплять тай годі")
-				|| s_choice6.equals("Раз на рік мию")) {
-			s_Rezult = s_Rezult + "Двері повинні добре виглядати та не скрипіти."
-					+ "Постійно слідкуйте за ними так як більшість енергії у житло входить через них.\n\n";
-		}
-		if (s_choice7.equals("Іслам")) {
-			s_Rezult = s_Rezult + "Повішайте навпроти входу велике око з синього скла «Назар»."
-					+ "Або/та розмістіть фігурку сура з Корану\n\n";
-		}
-		if (s_choice7.equals("Християнство")) {
-			s_Rezult = s_Rezult + "Ефективно буде охороняти будинок ікона. Найбільш сильною захисною іконою від злодіїв"
-					+ " є Ікона «Семистрільна», її необхідно повісити навпроти вхідних дверей або над вхідними дверима, "
-					+ "вона також захищає від сварок і розладу в сім'ї.\n\n";
-		}
-		if (s_choice7.equals("Буддизм")) {
-			s_Rezult = s_Rezult + "Фігурка Будди навпроти входу прекрасно захищатиме ваше житло від негараздів.\n\n";
-		}
-		if (s_choice7.equals("Індуїзм")) {
+		if (s_choice1.equals("Схід") || s_choice1.equals("Підень") || s_choice1.equals("Захід")
+				|| s_choice1.equals("Північ") || s_choice1.equals("Північний схід")) {
 			s_Rezult = s_Rezult
-					+ "Розміщення амулетів навпроти входу прекрасно захищатиме ваше житло від негараздів.\n\n";
+					+ "Переставте холодильник на південний схід, або південний захід, або північний захід. Перевірте, щоб поряд не було опалювальних систем.\n\n";
 		}
-		if (s_choice7.equals("інші релігії") || s_choice7.equals("Я атеїст")) {
-			s_Rezult = s_Rezult + "Повішайте навпроти входу просто яскраву і цікаву картинку, поставте скульптуру,"
-					+ " або іншу оригінальну річ, яка буде притягувати погляди.\n\n";
+		if (s_choice2.equals("Схід") || s_choice2.equals("Підень") || s_choice2.equals("Захід")
+				|| s_choice2.equals("Північ") || s_choice2.equals("Північний схід")
+				|| s_choice2.equals("Південний захід") || s_choice2.equals("Південний захід")) {
+			s_Rezult = s_Rezult
+					+ "Якщо є можливість, то переставте плиту на південну сторону, але не ставте її під вікно, у тутку, навпроти дверей чи посередині кухні.\n\n";
 		}
+		if (s_choice3.equals("Раз на тиждень") || s_choice3.equals("Раз на 2-3 дні")) {
+			s_Rezult = s_Rezult + "Прибирайте частіше. Пам'ятайте про те, що стан, в якому перебувають "
+					+ "газова плита і холодильник впливають на фінансовий стан сім'ї. Підтримуйте їх чистими"
+					+ " і справними, а холодильник по можливості максимально заповнюйте продуктами і наводите в ньому порядок."
+					+ "Безлад на кухні веде до фінансових негараздів, а порядок до достатку.\n\n";
+		}
+		if (s_choice4.equals("Залізна")) {
+			s_Rezult = s_Rezult + "Ваша кухня в основному із металу. Надлишок металу (зазвичай в техно стилі) "
+					+ "може привести до агресивності і напруги.\n\n";
+		}
+		if (s_choice4.equals("Дерев'яна")) {
+			s_Rezult = s_Rezult + "Ваша кухня в основному із дерева. Предмети з деревини, в занадто"
+					+ " великій кількості можуть призвести до атмосфери зайвої манірності.\n\n";
+		}
+		if (s_choice4.equals("Пластикова")) {
+			s_Rezult = s_Rezult + "Ваша кухня в основному із пластику. Пластик сам по собі нейтральний і "
+					+ "якості того чи іншого елемента він набуває завдяки своєму кольору "
+					+ "(наприклад, білий пластик - якості металу).\n\n";
+		}
+		if (s_choice4.equals("Скляна")) {
+			s_Rezult = s_Rezult + "Ваша кухня в основному із скла. Скло само по собі нейтральне і "
+					+ "якості того чи іншого елемента воно набуває завдяки своєму кольору "
+					+ "(наприклад, біле скло - якості металу).\n\n";
+		}
+
+		if (s_choice5.equals("Темний, тьмяний")) {
+			s_Rezult = s_Rezult + "Баланс інь ян на кухні повинен бути зміщений на користь ян,"
+					+ " але добитися його необхідно не кількістю яскравих кольорів і кутових форм,"
+					+ " а світлими стінами і хорошим, комфортним освітленням.Найбільш придатними"
+					+ " для стін кухні є світлі тони. Чорний, сірий і темно-коричневий не"
+					+ " найкращий вибір ні для апетиту, ні для настрою, ні для здоров'я. "
+					+ "Прохолодні кольори, наприклад, блакитний - знижують апетит, теплі - жовтий, "
+					+ "оранжевий, червоний - підвищують, зелений налаштовує на більш здорове харчування "
+					+ "з великою кількістю зелені і овочів, білий - бадьорить, додає відчуття простору "
+					+ "і чистоти; бежевий, кремовий і коричневий вельми затишні, але спонукають до"
+					+ " споживання кави і чорного чаю з випічкою.\n\n";
+		}
+		if (s_choice6.equals("Прибори") || s_choice6.equals("Посуд") || s_choice6.equals("Продукти")) {
+			s_Rezult = s_Rezult + "Купіть меблі з великою кількістю шафок з дверцятами, що закриваються,"
+					+ " в які поміститься все кухонне начиння, що дозволить тримати стіни і робочі поверхні порожніми і чистими.\n\n";
+		}
+		if (s_choice7.equals("Загальне. 1 лампочка") || s_choice7.equals("Загальне. Люстра")) {
+			s_Rezult = s_Rezult + "Кухня повинна бути добре освітлена. Непогано подбати про "
+					+ "декілька джерелах освітлення: над обіднім столом, над робочими поверхнями.\n\n";
+		}
+
 		if (i_putanna1 == 1) {
-			s_Rezult = s_Rezult + "У Вас туалет поряд із входом. "
-					+ "Подібне планування сприяє витоку фінансів. Щоб виправити ситуацію "
-					+ "тримайте двері туалету закритою і повісьте на неї (з боку коридору чи передпокою)"
-					+ " дзеркало. Крім цього, скористайтеся порожніми пятітрубчатими повітряними дзвіночками,"
-					+ " прикріпіть їх над дверима в туалет для нейтралізації негативної енергії.\n\n";
+			s_Rezult = s_Rezult + "Не вішайте рукавички і інші пристосування на стіну, прибирайте ножі,"
+					+ " виделки, терки і будь-які гострі предмети після використання, щоб не породжувати ша ци.\n\n";
 		}
 		if (i_putanna2 == 1) {
-			s_Rezult = s_Rezult + "Сходи у Вашому житлі краще закрити перегородкою, "
-					+ "ширмою або шторкою, якщо немає такої можливості через планування,"
-					+ " можна повісити біля сходів повітряні дзвіночки або кінатну рослину."
-					+ " Під сходами має бути вільно і чисто, захаращення простору виключається."
-					+ " Якщо Ви зберігаєте під сходами речі, зробіть для цього комору з дверима,"
-					+ " що закриваються.\n\n";
+			s_Rezult = s_Rezult + "Обідній стіл (на кухні-їдальні) повинен бути досить великим, "
+					+ "щоб всі члени сім'ї відчували себе за ним вільно під час трапези."
+					+ " Спільні обіди зміцнюють відносини всередині сім'ї і"
+					+ " роблять її сильніше у всіх життєвих аспектах.\n\n";
 		}
 		if (i_putanna3 == 1) {
-			s_Rezult = s_Rezult + "Вікно в коридорі, передпокої - це здорово, адже джерело денного"
-					+ " світла збільшує приплив ци і її циркуляцію. Але, вікно безпосередньо навпроти"
-					+ " входу, на жаль, несприятливо, так як енергія, надходячи через вхід, "
-					+ "буде відразу ж залишати будинок через вікно. Щоб цього не траплялося закрийте"
-					+ " вікно шторою або, якщо площа дозволяє, поставте перегородку з рослинами або"
-					+ " ширму між вікном і входом.\n\n";
+			s_Rezult = s_Rezult + "Дзеркала на кухні краще поміщати тільки в їдальні зоні,"
+					+ " щоб в них відбивалася готова їжа, подвоюючи і сприяючи достатку в домі,"
+					+ " робочі поверхні залиште поза увагою дзеркал, адже процес приготування "
+					+ "часто супроводжується безладдям, який подвоювати зовсім ні до чого."
+					+ "Дзеркало не повинно бути розділене на кілька частин (наприклад, як дзеркальна плитка)"
+					+ ", тому, що воно буде відображати ци обривками.\n\n";
 		}
 		if (i_putanna4 == 1) {
-			s_Rezult = s_Rezult + "Не зберігайте ззовні дверей речі. Прохід повинен бути вільним. "
-					+ "Зробіть перед дверима персональне та незалежне освітлення.\n\n";
+			s_Rezult = s_Rezult + "Важливо: людина, що готує їжу не повинен стояти спиною до вхідних дверей. "
+					+ "У такому положенні він буде відчувати себе незахищеним, а це вплине на якість їжі. Тому,"
+					+ " розставляючи меблі та побутові прилади, постарайтеся зробити так, щоб вхід був видимим"
+					+ " (можна і бічним зором) з усіх основних позицій.\n\n";
 		}
 		if (i_putanna5 == 1) {
-			s_Rezult = s_Rezult + "Для захисту від злодіїв, розташуйте фігурку синього носорога у коридорі "
-					+ "мордочкою до вхідних дверей, а ще краще - двох. Синій носоріг - древній символ фен-шуй"
-					+ " для захисту будинку. Також, існує символ з пари слона і носорога синього кольору."
-					+ "Потужним засобом захисту від негативної енергії є дзеркало багуа. Його можна повісити "
-					+ "тільки зовні, над вхідними дверима або поруч з нею, але так, щоб в ньому не відбивалися"
-					+ " люди або двері сусідньої квартири, або, якщо це стосується приватного будинку, "
-					+ "вікна та двері сусідніх будинків і пішоходи. Ще однин фен шуй засіб від злодіїв і"
-					+ " негативної енергії - символ у вигляді гармати. Він теж дуже сильний і не повинен"
-					+ " бути спрямований на людей.\n\n";
+			s_Rezult = s_Rezult
+					+ "Відкриті полиці заставляйте круглими ємностями для сипучих продуктів, а не кутовими.\n\n";
 		}
 		if (i_putanna6 == 1) {
-			s_Rezult = s_Rezult + "Ваші вхідні двері розташовані навпроти сходового маршу або ліфта,"
-					+ " дана ситуація може сприяти витоку енергії, а значить і грошових коштів."
-					+ " Щоб поліпшити фінансове становище підійміть поріг на 1-2 см, повісьте багуа над дверима.\n\n";
+			s_Rezult = s_Rezult + "Не ставте плиту впритул до холодильника або раковині, "
+					+ "це породжує ша ци (можливі негативні наслідки - сварки в родині, "
+					+ "дратівливість, агресія і втрати фінансів). Бажано, щоб ці предмети "
+					+ "знаходилися якнайдалі один від одного.\n\n";
 		}
 		if (i_putanna7 == 1) {
-			s_Rezult = s_Rezult + "Бажано, щоб дзеркало відображало Вас в ньому в повний ріст, "
-					+ "в такому дзеркалі Ваша енергія подвоюється повноцінно. Вішати дзеркало "
-					+ "навпроти вхідних дверей не варто - основна кількість вхідної ци відбитися"
-					+ " і не потрапить всередину житла, найкращий варіант - розташувати дзеркало збоку"
-					+ " від входу і тим самим візуально збільшити розміри передпокою, коридору."
-					+ "Якщо передпокій перетікає в довгий прямий коридор, декоруюте його дзеркалами"
-					+ " в шаховому порядку, то на одній стіні, то на інший, енергія при такому розташуванні"
-					+ " не розганятиметься, перетворюючись в ша. Дзеркала можна замінити або "
-					+ "чергувати набором настінних прикрас, кашпо з квітами і світильниками.";
+			s_Rezult = s_Rezult
+					+ "Використовуйте за призначенням дрібні електроприлади в секторах, які хочете стимулювати.";
 		}
 
-		/*
-		 * switch (s_Bagua) { case "Схід": { i_Bagua = 1 ; } break; case
-		 * "Південний схід": { i_Bagua = 2 ; } break; case "Підень": { i_Bagua =
-		 * 3 ; } break; case "Південний захід": { i_Bagua = 4 ; } break; case
-		 * "Захід": { i_Bagua = 5 ; } break; case "Північний захід": { i_Bagua =
-		 * 6 ; } break; case "Північ": { i_Bagua = 7 ; } break; case
-		 * "Північний схід": { i_Bagua = 8 ; } break; }
-		 * 
-		 * // choice1.add("Схід"); // choice1.add("Південний схід"); //
-		 * choice1.add("Підень"); // choice1.add("Південний захід"); //
-		 * choice1.add("Захід"); // choice1.add("Північний захід"); //
-		 * choice1.add("Північ"); // choice1.add("Північний схід");
-		 * 
-		 * switch (i_Gua1) { case 1: { i_GuaNapram1 = 2 ; } break; case 2: {
-		 * i_GuaNapram1 = 8 ; } break; case 3: { i_GuaNapram1 = 3 ; } break;
-		 * case 4: { i_GuaNapram1 = 7 ; } break; case 6: { i_GuaNapram1 = 5 ; }
-		 * break; case 7: { i_GuaNapram1 = 6 ; } break; case 8: { i_GuaNapram1 =
-		 * 4 ; } break; case 9: { i_GuaNapram1 = 1 ; } break; }
-		 * 
-		 * if (i_GuaNapram1 == 7){ i_GuaNapram1 = 3 ; } if (i_GuaNapram1 == 8){
-		 * i_GuaNapram1 = 4 ; } if (i_GuaNapram1 == 6){ i_GuaNapram1 = 5 ; }
-		 * 
-		 * if (i_Bagua == 7){ i_Bagua = 3 ; } if (i_Bagua == 8){ i_Bagua = 4 ; }
-		 * if (i_Bagua == 6){ i_Bagua = 5 ; }
-		 * 
-		 */
-
-		
-
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(500, 82, 482, 330);
+		scrollPane.setBounds(500, 82, 482, 406);
 		getContentPane().add(scrollPane);
 
 		JTextPane textPane = new JTextPane();
@@ -193,7 +160,7 @@ public class KuhnaRezultaty extends JFrame {
 		textPane.setFont(new Font("Trebuchet MS", Font.PLAIN, 20));
 		textPane.setText(s_Rezult);
 
-		JLabel label_2 = new JLabel("Коридор");
+		JLabel label_2 = new JLabel("Кухня");
 		label_2.setHorizontalAlignment(SwingConstants.CENTER);
 		label_2.setForeground(Color.CYAN);
 		label_2.setFont(new Font("Sitka Text", Font.BOLD, 33));
@@ -206,54 +173,25 @@ public class KuhnaRezultaty extends JFrame {
 		label_3.setBounds(500, 63, 482, 16);
 		getContentPane().add(label_3);
 
-		JButton btnNewButton = new JButton("Породження");
+		JButton btnNewButton = new JButton("Інь і ян");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				lblNewLabel.setIcon(new ImageIcon("res/Porodgenna.jpg"));
+				try {
+					desktop.browse(new URI("https://uk.wikipedia.org/wiki/%D0%86%D0%BD%D1%8C_%D1%96_%D1%8F%D0%BD"));
+				} catch (Exception e1) {
+				}
 			}
 		});
 		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 13));
 		btnNewButton.setForeground(new Color(0, 128, 0));
-		btnNewButton.setBounds(377, 540, 203, 25);
+		btnNewButton.setBounds(500, 516, 482, 25);
 		getContentPane().add(btnNewButton);
-
-		JButton button = new JButton("Пом'якшення");
-		button.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				lblNewLabel.setIcon(new ImageIcon("res/Zmakcenna.jpg"));
-			}
-		});
-		button.setFont(new Font("Tahoma", Font.BOLD, 13));
-		button.setForeground(new Color(0, 128, 0));
-		button.setBounds(782, 540, 212, 25);
-		getContentPane().add(button);
-
-		JButton button_1 = new JButton("Знищення");
-		button_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				lblNewLabel.setIcon(new ImageIcon("res/Znushcenna.jpg"));
-			}
-		});
-		button_1.setFont(new Font("Tahoma", Font.BOLD, 13));
-		button_1.setForeground(new Color(0, 128, 0));
-		button_1.setBounds(580, 540, 203, 25);
-		getContentPane().add(button_1);
-
-		JLabel label_4 = new JLabel("Бажаєте змінити стихію (енергію) ?");
-		label_4.setForeground(new Color(124, 252, 0));
-		label_4.setHorizontalAlignment(SwingConstants.CENTER);
-		label_4.setFont(new Font("Sitka Text", Font.BOLD | Font.ITALIC, 20));
-		label_4.setBounds(446, 517, 482, 24);
-		getContentPane().add(label_4);
-
-		lblNewLabel = new JLabel("");
-		lblNewLabel.setBounds(94, 180, 300, 265);
-		getContentPane().add(lblNewLabel);
 
 		l_logo = new JLabel("");
 		l_logo.setBounds(0, 0, 994, 565);
 		l_logo.setIcon(new ImageIcon("res/Rezult.jpg"));
-//		l_logo.setIcon(new ImageIcon("C:\\Users\\Zakkk\\Desktop\\Rezult.jpg"));
+		// l_logo.setIcon(new
+		// ImageIcon("C:\\Users\\Zakkk\\Desktop\\Rezult.jpg"));
 		getContentPane().add(l_logo);
 
 		setVisible(true);
