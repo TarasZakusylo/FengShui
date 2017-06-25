@@ -166,7 +166,7 @@ public class Vitalna extends JFrame {
 		choice4.setBounds(670, 265, 294, 22);
 		getContentPane().add(choice4);
 		choice4.add("Чудова ідея, хочу");
-		choice4.add("У мене є фонтан у квартирі");
+		choice4.add("У мене є фонтан");
 		choice4.add("Не знаю");
 		choice4.add("Це точно не для мене");
 
@@ -187,7 +187,7 @@ public class Vitalna extends JFrame {
 		choice7 = new Choice();
 		choice7.setBounds(670, 454, 294, 22);
 		getContentPane().add(choice7);
-		choice7.add("Немає взагалі.");
+		choice7.add("Немає взагалі");
 		choice7.add("Є, квітучі (крокус, герань, орхідея, фіалка...)");
 		choice7.add("Є, плодові (гранат, цитрусові, інжин, ананас...)");
 		choice7.add("Є, сукуленти (алое, кактуси, молочай, товстянка...)");
