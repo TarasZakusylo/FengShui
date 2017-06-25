@@ -71,7 +71,7 @@ public class Vitalna1 extends JFrame {
 					JOptionPane.showMessageDialog(null, "Помилка введення !");
 				} else {
 
-					new KuhnaRezultaty(s_choice1, s_choice2, s_choice3, s_choice4, s_choice5, s_choice6, s_choice7,
+					new VitalnaRezultaty(s_choice1, s_choice2, s_choice3, s_choice4, s_choice5, s_choice6, s_choice7,
 							i_putanna1, i_putanna2, i_putanna3, i_putanna4, i_putanna5, i_putanna6, i_putanna7);
 					setVisible(false);
 				}
@@ -82,56 +82,56 @@ public class Vitalna1 extends JFrame {
 		b_Dali.setBounds(844, 0, 150, 50);
 		getContentPane().add(b_Dali);
 
-		JLabel label = new JLabel("Ви зберігаєте ножі на столі (робочій поверхні) ?");
+		JLabel label = new JLabel("У Вашій вітальні є музичний центр чи музичні інструменти ?");
 		label.setForeground(new Color(255, 255, 0));
 		label.setFont(new Font("Sitka Text", Font.BOLD, 25));
 		label.setHorizontalAlignment(SwingConstants.CENTER);
 		label.setBounds(10, 60, 807, 35);
 		getContentPane().add(label);
 
-		JLabel label_1 = new JLabel("Ви практикуєте сімейні трапези ?");
+		JLabel label_1 = new JLabel("У Вашій вітальні є люстра ?");
 		label_1.setHorizontalAlignment(SwingConstants.CENTER);
 		label_1.setForeground(new Color(255, 255, 0));
 		label_1.setFont(new Font("Sitka Text", Font.BOLD, 25));
 		label_1.setBounds(10, 126, 807, 35);
 		getContentPane().add(label_1);
 
-		JLabel label_2 = new JLabel("У Вас на кухні є дзеркала ?");
+		JLabel label_2 = new JLabel("У Вашій вітальні є телевізор чи дом. кінотеатр ?");
 		label_2.setHorizontalAlignment(SwingConstants.CENTER);
 		label_2.setForeground(new Color(255, 255, 0));
 		label_2.setFont(new Font("Sitka Text", Font.BOLD, 25));
 		label_2.setBounds(10, 189, 807, 35);
 		getContentPane().add(label_2);
 
-		JLabel label_3 = new JLabel("Плита знаходиться поряд із холодильником чи раковиною ?");
+		JLabel label_3 = new JLabel("У Вашій вітальні є вікно ?");
 		label_3.setHorizontalAlignment(SwingConstants.CENTER);
 		label_3.setForeground(new Color(255, 255, 0));
 		label_3.setFont(new Font("Sitka Text", Font.BOLD, 25));
 		label_3.setBounds(10, 378, 807, 35);
 		getContentPane().add(label_3);
 
-		JLabel label_4 = new JLabel("У Вас є відкриті полиці ?");
+		JLabel label_4 = new JLabel("У Вашій вітальні є бра ?");
 		label_4.setHorizontalAlignment(SwingConstants.CENTER);
 		label_4.setForeground(new Color(255, 255, 0));
 		label_4.setFont(new Font("Sitka Text", Font.BOLD, 25));
 		label_4.setBounds(10, 315, 807, 35);
 		getContentPane().add(label_4);
 
-		JLabel label_5 = new JLabel("Робоча зона знаходить навпроти дверей ?");
+		JLabel label_5 = new JLabel("У Вашій вітальні є годинник?");
 		label_5.setHorizontalAlignment(SwingConstants.CENTER);
 		label_5.setForeground(new Color(255, 255, 0));
 		label_5.setFont(new Font("Sitka Text", Font.BOLD, 25));
 		label_5.setBounds(10, 252, 807, 35);
 		getContentPane().add(label_5);
 
-		JLabel label_6 = new JLabel("У Вас багато дрібних приладів ?");
+		JLabel label_6 = new JLabel("У Вашій вітальні є камін ?");
 		label_6.setHorizontalAlignment(SwingConstants.CENTER);
 		label_6.setForeground(new Color(255, 255, 0));
 		label_6.setFont(new Font("Sitka Text", Font.BOLD, 25));
 		label_6.setBounds(10, 441, 807, 35);
 		getContentPane().add(label_6);
 
-		JLabel label_7 = new JLabel("Коридор");
+		JLabel label_7 = new JLabel("Вітальня");
 		label_7.setHorizontalAlignment(SwingConstants.CENTER);
 		label_7.setForeground(new Color(0, 255, 255));
 		label_7.setFont(new Font("Sitka Text", Font.BOLD, 33));

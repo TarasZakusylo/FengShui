@@ -160,7 +160,7 @@ public class VitalnaRezultaty extends JFrame {
 		textPane.setFont(new Font("Trebuchet MS", Font.PLAIN, 20));
 		textPane.setText(s_Rezult);
 
-		JLabel label_2 = new JLabel("Кухня");
+		JLabel label_2 = new JLabel("Вітальня");
 		label_2.setHorizontalAlignment(SwingConstants.CENTER);
 		label_2.setForeground(Color.CYAN);
 		label_2.setFont(new Font("Sitka Text", Font.BOLD, 33));

@@ -70,7 +70,7 @@ public class Vitalna extends JFrame {
 				// s_choice1+" "+s_choice2+" "+s_choice3+" "+s_choice4+"
 				// "+s_choice5+" "+s_choice6+" "+s_choice7);
 
-				new Kuhna1(s_choice1, s_choice2, s_choice3, s_choice4, s_choice5, s_choice6, s_choice7);
+				new Vitalna1(s_choice1, s_choice2, s_choice3, s_choice4, s_choice5, s_choice6, s_choice7);
 				setVisible(false);
 
 			}
@@ -187,10 +187,11 @@ public class Vitalna extends JFrame {
 		choice7 = new Choice();
 		choice7.setBounds(670, 454, 294, 22);
 		getContentPane().add(choice7);
-		choice7.add("Квітучі (крокус, герань, орхідея, фіалка...)");
-		choice7.add("Плодові (гранат, цитрусові, інжин, ананас...)");
-		choice7.add("Сукуленти (алое, кактуси, молочай, товстянка...)");
-		choice7.add("Листяні (агава, драцена, фікус, монстера, юкка...)");
+		choice7.add("Немає взагалі.");
+		choice7.add("Є, квітучі (крокус, герань, орхідея, фіалка...)");
+		choice7.add("Є, плодові (гранат, цитрусові, інжин, ананас...)");
+		choice7.add("Є, сукуленти (алое, кактуси, молочай, товстянка...)");
+		choice7.add("Є, листяні (агава, драцена, фікус, монстера, юкка..)");
 		
 		l_logo = new JLabel("");
 		l_logo.setBounds(0, 0, 994, 565);
