@@ -337,7 +337,6 @@ public class Dutaca1 extends JFrame {
 		l_logo = new JLabel("");
 		l_logo.setBounds(0, 0, 994, 565);
 		l_logo.setIcon(new ImageIcon("res/Oputyvanna.jpg"));
-		// ImageIcon("C:\\Users\\Zakkk\\Desktop\\Oputyvanna.jpg"));
 		getContentPane().add(l_logo);
 
 		setVisible(true);

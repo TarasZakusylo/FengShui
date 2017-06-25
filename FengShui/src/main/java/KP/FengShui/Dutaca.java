@@ -65,11 +65,6 @@ public class Dutaca extends JFrame {
 				String s_choice6 = choice6.getSelectedItem();
 				String s_choice7 = choice7.getSelectedItem();
 
-				// System.out.println(i_Gua1+" "+i_Gua2+" "+i_Gua3+" "+i_Gua4+"
-				// "+i_Gua5+" "+i_Gua6+" "+
-				// s_choice1+" "+s_choice2+" "+s_choice3+" "+s_choice4+"
-				// "+s_choice5+" "+s_choice6+" "+s_choice7);
-
 				new Dutaca1(s_choice1, s_choice2, s_choice3, s_choice4, s_choice5, s_choice6, s_choice7);
 				setVisible(false);
 
