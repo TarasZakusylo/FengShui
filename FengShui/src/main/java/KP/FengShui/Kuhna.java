@@ -198,7 +198,7 @@ public class Kuhna extends JFrame {
 		choice7.add("Загальне. 1 лампочка");
 		choice7.add("Загальне. Люстра");
 		choice7.add("Кілька світильників");
-		choice7.add("Місцеве. Над робочим місцем.");
+		choice7.add("Місцеве. Над робочим місцем");
 		choice7.add("І загальне, і місцеве. Максимум світла");
 
 		l_logo = new JLabel("");
