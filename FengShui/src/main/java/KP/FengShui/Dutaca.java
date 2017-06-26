@@ -181,7 +181,6 @@ public class Dutaca extends JFrame {
 		choice6.add("У кутку");
 		choice6.add("Поряд із вікном");
 		choice6.add("Посередині стіни");
-		choice6.add("Між вікном та дверима");
 		choice6.add("Ногами до дверей");
 
 		choice7 = new Choice();

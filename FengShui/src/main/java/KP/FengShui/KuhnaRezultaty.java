@@ -182,7 +182,7 @@ public class KuhnaRezultaty extends JFrame {
 				}
 			}
 		});
-		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 13));
+		btnNewButton.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 18));
 		btnNewButton.setForeground(new Color(0, 128, 0));
 		btnNewButton.setBounds(500, 516, 482, 25);
 		getContentPane().add(btnNewButton);
