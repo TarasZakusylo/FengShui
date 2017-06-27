@@ -1,6 +1,7 @@
 package KP.FengShui;
 
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -25,7 +26,7 @@ public class VannaRezultaty extends JFrame {
 
 	private JLabel l_logo;
 
-	private JLabel lblNewLabel;
+	private JLabel label;
 
 	public VannaRezultaty(
 			String s_choice1, String s_choice2, String s_choice3, String s_choice4, String s_choice5, String s_choice6,
@@ -56,49 +57,72 @@ public class VannaRezultaty extends JFrame {
 		getContentPane().add(b_Menu);
 
 		if (s_choice1.equals("Темний, тьмяний") || s_choice1.equals("Маю сумніви")) {
-			s_Rezult = s_Rezult + "Створіть хороше освітлення у Вашому коридорі.\n\n";
+			s_Rezult = s_Rezult + "Для нашого здоров'я сприятлива ванна в гамі білого, "
+					+ "пастельних або свіжих, неяскравих тонів блакитного і зеленого."
+					+ " Ці відтінки допомагають нам розслабитися, відпочити, "
+					+ "і легко очиститися від усього негативного.\n\n";
 		}
-		if (s_choice2.equals("Так, тісненько у мене")) {
-			s_Rezult = s_Rezult + "Не ставте біля входу багато меблів, віддайте перевагу шафам з дверцятами,"
-					+ " що закриваються. Обмежтесь 1-2 шафами.\n\n";
+		if (s_choice2.equals("Дзеркальна")) {
+			s_Rezult = s_Rezult + "Не робіть стелю дзеркальною! Дзеркало відображає не тільки наші тіла, "
+					+ "а й енергетичні потоки, і тим самим не пропускає їх вище, перериваючи нашу зв'язок з космосом.\n\n";
 		}
-		if (s_choice3.equals("Все взуття поряд із дверима (\"під рукою\")")
-				|| s_choice3.equals("Більшість взуття поряд із дверима")) {
-			s_Rezult = s_Rezult + "Взуття, що мало використовується сховайте у шафу."
-					+ " Звільніть прохід. Тоді енергія буде легше проникати у будинок.\n\n";
+		if (s_choice2.equals("Кілька рівнева")) {
+			s_Rezult = s_Rezult + "Стелю найкраще зробити білою і рівною - різнорівнева не дуже хороша для здоров'я.\n\n";
 		}
-		if (s_choice4.equals("Все одноманітне (однотонне)")) {
-			s_Rezult = s_Rezult + "Простір можна акцентувати яскравими елементами червоного і жовтого кольору,"
-					+ " так як ці кольори притягують ци. Наприклад, поставити червоний пуф, або дзеркало в жовтій оправі.\n\n";
+		if (s_choice3.equals("Гострувата люстра")) {
+			s_Rezult = s_Rezult + "Уникайте люстр у яких вістря деяких частин спрямовані вниз - вони, немов протикають простір, створюючи стрілки ша ци.\n\n";
 		}
-		if (s_choice5.equals("Залізні") || s_choice5.equals("Пластикові") || s_choice5.equals("Скляні")) {
-			s_Rezult = s_Rezult + "Двері повинні містити дерево. "
-					+ "Наприклад, зробіть якісь декоративні дерев'яні вставочки.\n\n";
+		if (s_choice3.equals("Софіти, що випирають")) {
+			s_Rezult = s_Rezult + "Форма Ваших софітів є витонченою, містить гострі кути"
+					+ " або звисаючі кристали, краще розташовувати їх на стелі в тих місцях,"
+					+ " під якими ви не перебуваєте за службовим, а краще, ті, під якими не"
+					+ " проходите зовсім: у стіни або в ніші.\n\n";
 		}
-		if (s_choice6.equals("Мені це не цікаво") || s_choice6.equals("Не скриплять тай годі")
+		if (s_choice3.equals("Софіти, що сховані")) {
+			s_Rezult = s_Rezult + "Ваші софіти є ідеальними для освітлення ванни із точки зору феншуй.\n\n";
+		}
+		if (s_choice3.equals("Бра, світильники, люстра обтікаючої форми")) {
+			s_Rezult = s_Rezult + "Для Вашої ванни осітлення є чудовим. Так і дотримуйтесь обтікаючих форм.\n\n";
+		}
+		if (s_choice3.equals("Бра, світильники, люстра кутової форми")) {
+			s_Rezult = s_Rezult + "Старайтесь дотримуватись обтікаючих форм про організації освітлення.\n\n";
+		}
+		if (s_choice4.equals("Сантехніка лицем до дверей")) {
+			s_Rezult = s_Rezult + "Перебуваючи у ванній кімнаті, моя руки або приймаючи душ, вам бажано"
+					+ " мати можливість бачити вхідні двері. Нехай вона буде замкнена, і все ж, люди "
+					+ "відчувають себе більш захищено і спокійно, коли вхід знаходиться в полі зору. "
+					+ "Тому, по можливості, розмістіть сантехніку таким чином, щоб вам не довелося щось"
+					+ " робити, повернувшись до дверей спиною.\n\n";
+		}
+		if (s_choice5.equals("Прямокутна")) {
+			s_Rezult = s_Rezult + "Ванна або душова кабінка - найбільші і важливі предмети у ванній кімнаті. "
+					+ "Якщо дозволяє простір і кошти, замість незграбною прямокутної ванни або душової, "
+					+ "вибирайте круглий, напівкруглу або овальну. Ці форми асоціюються з кругляшками монети, "
+					+ "а вода - символ грошового потоку, так що разом вони сприяють процвітанню і багатству.\n\n";
+		}
+		if (s_choice6.equals("Прямокутна")
 				|| s_choice6.equals("Раз на рік мию")) {
-			s_Rezult = s_Rezult + "Двері повинні добре виглядати та не скрипіти."
-					+ "Постійно слідкуйте за ними так як більшість енергії у житло входить через них.\n\n";
+			s_Rezult = s_Rezult + "Якщо є можливість, то замініть раковину на округлу."
+					+ " Кругла раковина - стильне і вдале рішення. Вона приноситиме в дім багатство та процвітання.\n\n";
 		}
 		
-		if (i_putanna1 == 1) {
-			s_Rezult = s_Rezult + "У Вас туалет поряд із входом. "
-					+ "Подібне планування сприяє витоку фінансів. Щоб виправити ситуацію "
-					+ "тримайте двері туалету закритою і повісьте на неї (з боку коридору чи передпокою)"
-					+ " дзеркало. Крім цього, скористайтеся порожніми пятітрубчатими повітряними дзвіночками,"
-					+ " прикріпіть їх над дверима в туалет для нейтралізації негативної енергії.\n\n";
+		if (i_putanna1 == 2) {
+			s_Rezult = s_Rezult + "Світле дерево природного  кольору покрите прозорим лаком"
+					+ " є дуже сприятливим у ванній. Недарма російські лазні і фінські сауни бувають "
+					+ "найчастіше зі світлого дерева. Натуральне дерево сприяє оздоровленню. Тому, можете"
+					+ " сміливо купувати фінську сауну-кабінку або просто розставити кілька банного приладдя,"
+					+ " лавочку для ніг або діжку в своїй домашній ванній кімнаті.\n\n";
 		}
-		if (i_putanna2 == 1) {
-			s_Rezult = s_Rezult + "Сходи у Вашому житлі краще закрити перегородкою, "
-					+ "ширмою або шторкою, якщо немає такої можливості через планування,"
-					+ " можна повісити біля сходів повітряні дзвіночки або кінатну рослину."
-					+ " Під сходами має бути вільно і чисто, захаращення простору виключається."
-					+ " Якщо Ви зберігаєте під сходами речі, зробіть для цього комору з дверима,"
-					+ " що закриваються.\n\n";
+		if (i_putanna2 == 2) {
+			s_Rezult = s_Rezult + "Декоруйте ванну кімнату особливими акцентами, невеликими деталями і аксесуарами."
+					+ " Тоді вони будуть стимулювати залучення ци в ванну і радувати око. "
+					+ "Не варто так само економити на красивих бордюрах і декорах-вставках,"
+					+ " які зазвичай входять в набір кахлю. Вони дуже добре привертають ци, "
+					+ "при вмілому використанні створюють стиль і оживляють приміщення.";
 		}
 		
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(500, 82, 482, 330);
+		scrollPane.setBounds(500, 82, 482, 399);
 		getContentPane().add(scrollPane);
 
 		JTextPane textPane = new JTextPane();
@@ -106,20 +130,6 @@ public class VannaRezultaty extends JFrame {
 		textPane.setForeground(new Color(186, 85, 211));
 		textPane.setFont(new Font("Trebuchet MS", Font.PLAIN, 20));
 		textPane.setText(s_Rezult);
-
-		JLabel label = new JLabel("Ваша стихія - " + s_GuaNapram1);
-		label.setHorizontalAlignment(SwingConstants.CENTER);
-		label.setForeground(new Color(0, 255, 255));
-		label.setFont(new Font("Trebuchet MS", Font.PLAIN, 25));
-		label.setBounds(446, 443, 482, 30);
-		getContentPane().add(label);
-
-		JLabel label_1 = new JLabel("Стихія Вашого коридору - " + s_BaguaResult);
-		label_1.setHorizontalAlignment(SwingConstants.CENTER);
-		label_1.setForeground(new Color(0, 255, 255));
-		label_1.setFont(new Font("Trebuchet MS", Font.PLAIN, 25));
-		label_1.setBounds(456, 474, 482, 30);
-		getContentPane().add(label_1);
 
 		JLabel label_2 = new JLabel("Коридор");
 		label_2.setHorizontalAlignment(SwingConstants.CENTER);
@@ -134,49 +144,31 @@ public class VannaRezultaty extends JFrame {
 		label_3.setBounds(500, 63, 482, 16);
 		getContentPane().add(label_3);
 
-		JButton btnNewButton = new JButton("Породження");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				lblNewLabel.setIcon(new ImageIcon("res/Porodgenna.jpg"));
-			}
-		});
-		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 13));
-		btnNewButton.setForeground(new Color(0, 128, 0));
-		btnNewButton.setBounds(377, 540, 203, 25);
-		getContentPane().add(btnNewButton);
-
-		JButton button = new JButton("Пом'якшення");
+		JButton button = new JButton("Положення дверей ванної кімнати");
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				lblNewLabel.setIcon(new ImageIcon("res/Zmakcenna.jpg"));
+				label.setIcon(new ImageIcon("res/DveriVannoi.png"));
 			}
 		});
 		button.setFont(new Font("Tahoma", Font.BOLD, 13));
 		button.setForeground(new Color(0, 128, 0));
-		button.setBounds(782, 540, 212, 25);
+		button.setBounds(500, 527, 482, 25);
 		getContentPane().add(button);
 
-		JButton button_1 = new JButton("Знищення");
+		JButton button_1 = new JButton("Палітра кольорів для ванної кімнати");
 		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				lblNewLabel.setIcon(new ImageIcon("res/Znushcenna.jpg"));
+				label.setIcon(new ImageIcon("res/KoloruDlaVannu.png"));
 			}
 		});
 		button_1.setFont(new Font("Tahoma", Font.BOLD, 13));
 		button_1.setForeground(new Color(0, 128, 0));
-		button_1.setBounds(580, 540, 203, 25);
+		button_1.setBounds(500, 502, 482, 25);
 		getContentPane().add(button_1);
-
-		JLabel label_4 = new JLabel("Бажаєте змінити стихію (енергію) ?");
-		label_4.setForeground(new Color(124, 252, 0));
-		label_4.setHorizontalAlignment(SwingConstants.CENTER);
-		label_4.setFont(new Font("Sitka Text", Font.BOLD | Font.ITALIC, 20));
-		label_4.setBounds(446, 517, 482, 24);
-		getContentPane().add(label_4);
-
-		lblNewLabel = new JLabel("");
-		lblNewLabel.setBounds(94, 180, 300, 265);
-		getContentPane().add(lblNewLabel);
+		
+		label = new JLabel("");
+		label.setBounds(33, 82, 427, 399);
+		getContentPane().add(label);
 
 		l_logo = new JLabel("");
 		l_logo.setBounds(0, 0, 994, 565);

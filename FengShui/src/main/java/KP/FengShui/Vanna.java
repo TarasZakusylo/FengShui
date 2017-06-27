@@ -147,40 +147,38 @@ public class Vanna extends JFrame {
 		choice2 = new Choice();
 		choice2.setBounds(634, 131, 330, 22);
 		getContentPane().add(choice2);
-		choice2.add("Так, тісненько у мене");
-		choice2.add("1-2 шафи");
-		choice2.add("Ні, мінімалістично");
+		choice2.add("Дзеркальна");
+		choice2.add("Кілька рівнева");
+		choice2.add("Рівна");
 
 		choice3 = new Choice();
 		choice3.setBounds(634, 187, 330, 22);
 		getContentPane().add(choice3);
-		choice3.add("Все взуття поряд із дверима (\"під рукою\")");
-		choice3.add("Більшість взуття поряд із дверима");
-		choice3.add("Все взуття у шафі, окрім однієї пари");
-		choice3.add("Взуття тільки у шафі");
+		choice3.add("Гострувата люстра");
+		choice3.add("Софіти, що випирають");
+		choice3.add("Софіти, що сховані");
+		choice3.add("Бра, світильники, люстра обтікаючої форми");
+		choice3.add("Бра, світильники, люстра кутової форми");
+		
 
 		choice4 = new Choice();
 		choice4.setBounds(634, 247, 330, 22);
 		getContentPane().add(choice4);
-		choice4.add("Все одноманітне (однотонне)");
-		choice4.add("У мене немає певного стилю, все різноманітне");
-		choice4.add("Загалом одноманітне, але є деякі особливі елементи");
+		choice4.add("Сантехніка лицем до дверей");
+		choice4.add("Сантехніка під кутом до дверей");
+		choice4.add("Сантехніка поряд із дверима");
 
 		choice5 = new Choice();
 		choice5.setBounds(634, 305, 330, 22);
 		getContentPane().add(choice5);
-		choice5.add("Залізні");
-		choice5.add("Дерев'яні");
-		choice5.add("Пластикові");
-		choice5.add("Скляні");
+		choice5.add("Прямокутна");
+		choice5.add("Округла");
 
 		choice6 = new Choice();
 		choice6.setBounds(634, 363, 330, 22);
 		getContentPane().add(choice6);
-		choice6.add("Мені це не цікаво");
-		choice6.add("Не скриплять тай годі");
-		choice6.add("Раз на рік мию");
-		choice6.add("Постійно слідкую за чистотою та змащую їх");
+		choice6.add("Прямокутна");
+		choice6.add("Округла");
 
 		JLabel label_8 = new JLabel("Чи є у Вашій ванній кімнаті щось дерев’яне ?");
 		label_8.setHorizontalAlignment(SwingConstants.CENTER);
