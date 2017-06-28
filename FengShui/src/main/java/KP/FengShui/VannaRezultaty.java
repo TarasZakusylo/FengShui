@@ -1,7 +1,6 @@
 package KP.FengShui;
 
 import java.awt.Color;
-import java.awt.Component;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -22,15 +21,13 @@ public class VannaRezultaty extends JFrame {
 	String s_Rezult = "";
 
 	String s_BaguaResult = "";
-	private String s_GuaNapram1 = "";
 
 	private JLabel l_logo;
 
 	private JLabel label;
 
-	public VannaRezultaty(
-			String s_choice1, String s_choice2, String s_choice3, String s_choice4, String s_choice5, String s_choice6,
-			int i_putanna1, int i_putanna2) {
+	public VannaRezultaty(String s_choice1, String s_choice2, String s_choice3, String s_choice4, String s_choice5,
+			String s_choice6, int i_putanna1, int i_putanna2) {
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(1000, 600);
@@ -67,10 +64,12 @@ public class VannaRezultaty extends JFrame {
 					+ "а й енергетичні потоки, і тим самим не пропускає їх вище, перериваючи нашу зв'язок з космосом.\n\n";
 		}
 		if (s_choice2.equals("Кілька рівнева")) {
-			s_Rezult = s_Rezult + "Стелю найкраще зробити білою і рівною - різнорівнева не дуже хороша для здоров'я.\n\n";
+			s_Rezult = s_Rezult
+					+ "Стелю найкраще зробити білою і рівною - різнорівнева не дуже хороша для здоров'я.\n\n";
 		}
 		if (s_choice3.equals("Гострувата люстра")) {
-			s_Rezult = s_Rezult + "Уникайте люстр у яких вістря деяких частин спрямовані вниз - вони, немов протикають простір, створюючи стрілки ша ци.\n\n";
+			s_Rezult = s_Rezult
+					+ "Уникайте люстр у яких вістря деяких частин спрямовані вниз - вони, немов протикають простір, створюючи стрілки ша ци.\n\n";
 		}
 		if (s_choice3.equals("Софіти, що випирають")) {
 			s_Rezult = s_Rezult + "Форма Ваших софітів є витонченою, містить гострі кути"
@@ -100,12 +99,11 @@ public class VannaRezultaty extends JFrame {
 					+ "вибирайте круглий, напівкруглу або овальну. Ці форми асоціюються з кругляшками монети, "
 					+ "а вода - символ грошового потоку, так що разом вони сприяють процвітанню і багатству.\n\n";
 		}
-		if (s_choice6.equals("Прямокутна")
-				|| s_choice6.equals("Раз на рік мию")) {
+		if (s_choice6.equals("Прямокутна") || s_choice6.equals("Раз на рік мию")) {
 			s_Rezult = s_Rezult + "Якщо є можливість, то замініть раковину на округлу."
 					+ " Кругла раковина - стильне і вдале рішення. Вона приноситиме в дім багатство та процвітання.\n\n";
 		}
-		
+
 		if (i_putanna1 == 2) {
 			s_Rezult = s_Rezult + "Світле дерево природного  кольору покрите прозорим лаком"
 					+ " є дуже сприятливим у ванній. Недарма російські лазні і фінські сауни бувають "
@@ -120,7 +118,7 @@ public class VannaRezultaty extends JFrame {
 					+ " які зазвичай входять в набір кахлю. Вони дуже добре привертають ци, "
 					+ "при вмілому використанні створюють стиль і оживляють приміщення.";
 		}
-		
+
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(500, 82, 482, 399);
 		getContentPane().add(scrollPane);
@@ -165,7 +163,7 @@ public class VannaRezultaty extends JFrame {
 		button_1.setForeground(new Color(0, 128, 0));
 		button_1.setBounds(500, 502, 482, 25);
 		getContentPane().add(button_1);
-		
+
 		label = new JLabel("");
 		label.setBounds(33, 82, 427, 399);
 		getContentPane().add(label);
@@ -173,7 +171,8 @@ public class VannaRezultaty extends JFrame {
 		l_logo = new JLabel("");
 		l_logo.setBounds(0, 0, 994, 565);
 		l_logo.setIcon(new ImageIcon("res/Rezult.jpg"));
-//		l_logo.setIcon(new ImageIcon("C:\\Users\\Zakkk\\Desktop\\Rezult.jpg"));
+		// l_logo.setIcon(new
+		// ImageIcon("C:\\Users\\Zakkk\\Desktop\\Rezult.jpg"));
 		getContentPane().add(l_logo);
 
 		setVisible(true);
